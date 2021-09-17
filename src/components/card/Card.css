@@ -8,6 +8,12 @@
   border: 1px solid black;
   border-radius: 20px;
   margin: 1vw;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-1vh);
 }
 
 dl {
