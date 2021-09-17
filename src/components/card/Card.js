@@ -2,7 +2,7 @@ import './Card.css';
 
 export const Card = ({ article }) => {
   return (
-    <article>
+    <article className='card'>
       <dl>
         <dt>Title:</dt>
         <dd>{article.title}</dd>

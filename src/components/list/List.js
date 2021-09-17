@@ -12,8 +12,11 @@ export const List = ({ articles }) => {
   })
 
   return (
-    <section>
-      {articleCards}
+    <section className='articlesContainer'>
+      <h2>Articles</h2>
+      <section className='cards'>
+        {articleCards}
+      </section>
     </section>
   )
 }

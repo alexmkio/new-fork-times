@@ -1,0 +1,30 @@
+.card {
+  /* position: relative; */
+  width: 30vw;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 1vw;
+}
+
+dl {
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+dt {
+  margin-top: 1rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+dd {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
