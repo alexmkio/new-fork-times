@@ -1,13 +1,14 @@
 import './List.css';
 import { Card } from "../card/Card"
+import { Link } from 'react-router-dom';
 
 export const List = ({ articles }) => {
   let articleCards = articles.map(currentArticle => {
+    let unique = currentArticle.short_url.split("/")[3]
     return (
-      <Card
-        key={`${currentArticle.url}`}
-        article={currentArticle}
-      />
+      <Link to={`${unique}`} key={unique} >
+        <Card key={unique} article={currentArticle} />
+      </Link>
     )
   })
 

@@ -15,6 +15,7 @@
 .card:hover {
   transform: translateY(-1vh);
 }
+
 dl {
   padding: 0rem;
   display: flex;
