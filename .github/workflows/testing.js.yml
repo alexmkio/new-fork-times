@@ -24,7 +24,7 @@ jobs:
           start: npm start
           
     - name: Checkout 🛎️
-      uses: actions/checkout@v2.3.1
+      uses: actions/checkout@v2
 
     - name: Install and Build 🔧 
       run: |
