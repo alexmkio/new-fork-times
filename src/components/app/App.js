@@ -2,14 +2,16 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Header } from '../header/Header';
+import { Functions } from '../functions/Functions';
 import { List } from '../list/List';
 import { Details } from '../details/Details';
 import { Error } from '../error/Error';
 import { getData } from '../../utils/apiCalls';
 
 export const App = () => {
-  const [articles, setArticles] = useState([]);
-  const [errorCode, setErrorCode] = useState(0);
+  const [articles, setArticles] = useState([])
+  const [errorCode, setErrorCode] = useState(0)
+  const [sorted, setSorted] = useState(false)
 
   const fetchAndCleanData = async (section) => {
     try {
@@ -24,13 +26,19 @@ export const App = () => {
     fetchAndCleanData('home')
   }, [])
 
+  const sortArticles = () => {
+  }
+
   return (
     <>
       <Header />
       <main>
         <Switch>
           <Route exact path='/' render={() =>
-            <List articles={articles} /> 
+            <>
+              <Functions sorted={sorted} sortArticles={sortArticles} />
+              <List articles={articles} />
+            </>
           }/>
 
           <Route path='/:id' render={({ match }) => {
