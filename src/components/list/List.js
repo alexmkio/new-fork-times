@@ -6,8 +6,8 @@ export const List = ({ articles }) => {
   let articleCards = articles.map(currentArticle => {
     let unique = currentArticle.short_url.split("/")[3]
     return (
-      <Link to={`${unique}`} key={unique} >
-        <Card key={unique} article={currentArticle} />
+      <Link to={`${unique}`} key={`${unique}`} >
+        <Card key={`${unique}`} article={currentArticle} />
       </Link>
     )
   })
