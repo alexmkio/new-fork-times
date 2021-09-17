@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import { Header } from '../header/Header';
 import { Functions } from '../functions/Functions';
 import { List } from '../list/List';
@@ -9,6 +9,7 @@ import { Error } from '../error/Error';
 import { getData } from '../../utils/apiCalls';
 
 export const App = () => {
+  let history = useHistory()
   const [articles, setArticles] = useState([])
   const [errorCode, setErrorCode] = useState(0)
   const [sorted, setSorted] = useState(false)
@@ -35,6 +36,12 @@ export const App = () => {
     setSorted(true)
   }
 
+  const clearSelected = () => {
+    setErrorCode(0)
+  }
+
+  if (errorCode) history.push("/error")
+
   return (
     <>
       <Header />
@@ -59,10 +66,12 @@ export const App = () => {
           }} />
 
           <Route exact path='/error' render={() =>
-            <Error errorCode={errorCode} />
+            <Error errorCode={errorCode} clearSelected={clearSelected} />
           }/>
           
-          <Redirect to='/error' />
+          <Redirect to='/404' render={() =>
+            <Error errorCode={404} clearSelected={clearSelected} />
+          }/>
         </Switch>
       </main>
     </>
