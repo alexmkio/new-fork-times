@@ -10,10 +10,10 @@ export const Details = ({ article }) => {
       <dd>{article.byline}</dd>
 
       <dt>Published Date:</dt>
-      <dd>{article.published_date}</dd>
+      <dd>{(new Date(article.published_date)).toLocaleString()}</dd>
 
       <dt>Last Updated:</dt>
-      <dd>{article.updated_date}</dd>
+      <dd>{(new Date(article.updated_date)).toLocaleString()}</dd>
 
       <dt>Section:</dt>
       <dd>{article.section}</dd>

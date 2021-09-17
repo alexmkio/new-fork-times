@@ -11,7 +11,7 @@ export const Card = ({ article }) => {
         <dd>{article.byline}</dd>
 
         <dt>Last Updated:</dt>
-        <dd>{article.updated_date}</dd>
+        <dd>{(new Date(article.updated_date)).toLocaleString()}</dd>
 
         <dt>Section:</dt>
         <dd>{article.section}</dd>
