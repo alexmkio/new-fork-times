@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './List.css';
 import { Card } from "../card/Card"
 import { Link } from 'react-router-dom';
@@ -20,4 +21,8 @@ export const List = ({ articles }) => {
       </section>
     </section>
   )
+}
+
+List.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.object).isRequired
 }

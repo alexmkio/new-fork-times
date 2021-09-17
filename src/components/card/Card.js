@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Card.css';
 
 export const Card = ({ article }) => {
@@ -24,4 +25,8 @@ export const Card = ({ article }) => {
       </dl>
     </article>
   )
+}
+
+Card.propTypes = {
+  article: PropTypes.object.isRequired
 }

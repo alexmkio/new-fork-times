@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Details.css';
 
 export const Details = ({ article }) => {
@@ -28,4 +29,8 @@ export const Details = ({ article }) => {
       <dd>{article.abstract}</dd>
     </dl>
   )
+}
+
+Details.propTypes = {
+  article: PropTypes.object.isRequired
 }

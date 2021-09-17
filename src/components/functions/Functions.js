@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Functions.css';
 
 export const Functions = ({ sorted, sortArticles }) => {
@@ -8,4 +9,9 @@ export const Functions = ({ sorted, sortArticles }) => {
       {sortButton}
     </>
   )
+}
+
+Functions.propTypes = {
+  sorted: PropTypes.bool.isRequired,
+  sortArticles: PropTypes.func.isRequired
 }
