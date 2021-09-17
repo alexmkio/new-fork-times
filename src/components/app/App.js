@@ -54,7 +54,7 @@ export const App = () => {
             </>
           }/>
 
-          <Route path='/:id' render={({ match }) => {
+          <Route path='/article/:id' render={({ match }) => {
             let matchingArticle = articles.find(
               article => article.short_url.split("/")[3] === match.params.id
             )
@@ -68,10 +68,12 @@ export const App = () => {
           <Route exact path='/error' render={() =>
             <Error errorCode={errorCode} clearSelected={clearSelected} />
           }/>
-          
-          <Redirect to='/404' render={() =>
-            <Error errorCode={404} clearSelected={clearSelected} />
+
+          <Route exact path='/404' render={() =>
+            <Error errorCode={'404'} clearSelected={clearSelected} />
           }/>
+          
+          <Redirect to='/404' />
         </Switch>
       </main>
     </>
