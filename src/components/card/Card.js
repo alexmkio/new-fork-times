@@ -17,7 +17,7 @@ export const Card = ({ article }) => {
         <dd>{article.section}</dd>
 
         <dt>URL:</dt>
-        <dd>{article.url}</dd>
+        <dd>{article.short_url}</dd>
 
         <dt>Picture:</dt>
         <dd>{article.multimedia[0].url}</dd>
