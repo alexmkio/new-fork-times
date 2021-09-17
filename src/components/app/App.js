@@ -17,7 +17,7 @@ export const App = () => {
     } catch (error) {
       setErrorCode(Number(error.message))
     }
-  };
+  }
 
   useEffect(() => {
     fetchAndCleanData('home')

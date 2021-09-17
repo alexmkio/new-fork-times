@@ -1,7 +1,19 @@
 import './List.css';
+import { Card } from "../card/Card"
 
-export const List = () => {
+export const List = ({ articles }) => {
+  let articleCards = articles.map(currentArticle => {
+    return (
+      <Card
+        key={`${currentArticle.url}`}
+        article={currentArticle}
+      />
+    )
+  })
+
   return (
-    <h1>List</h1>
+    <section>
+      {articleCards}
+    </section>
   )
 }
