@@ -27,6 +27,12 @@ export const App = () => {
   }, [])
 
   const sortArticles = () => {
+    let unsortedArticles = [...articles]
+    let sortedArticles = unsortedArticles.sort((a, b) => {
+      return new Date(b.updated_date) - new Date(a.updated_date)
+    })
+    setArticles(sortedArticles)
+    setSorted(true)
   }
 
   return (
