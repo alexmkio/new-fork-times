@@ -12,16 +12,10 @@ export const Card = ({ article }) => {
         <dd>{article.byline}</dd>
 
         <dt>Last Updated:</dt>
-        <dd>{(new Date(article.updated_date)).toLocaleString()}</dd>
+        <dd>{(new Date(article.updated_date)).toLocaleString().split(",").join(" ---")}</dd>
 
         <dt>Section:</dt>
         <dd>{article.section}</dd>
-
-        <dt>URL:</dt>
-        <dd>{article.short_url}</dd>
-
-        <dt>Picture:</dt>
-        <dd>{article.multimedia[0].url}</dd>
       </dl>
     </article>
   )
