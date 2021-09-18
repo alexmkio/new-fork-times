@@ -26,11 +26,11 @@ dl {
 dt {
   margin-top: 1rem;
   font-size: .9rem;
-  text-transform: uppercase;
   line-height: 1;
 }
 
 dd {
   font-size: 1.4rem;
   text-transform: capitalize;
+  margin: 0;
 }
