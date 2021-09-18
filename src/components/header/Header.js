@@ -2,6 +2,8 @@ import './Header.css';
 
 export const Header = () => {
   return (
-    <h1>Header</h1>
+    <header>
+      <h1>New Fork Times</h1>
+    </header>
   )
 }
