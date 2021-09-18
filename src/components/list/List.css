@@ -15,6 +15,26 @@ h2 {
   gap: 1rem;
 }
 
+.cards > a {
+  text-decoration: none;
+}
+
+.cards > a:link {
+  color: black;
+} 
+
+.cards > a:visited {
+  color: black;
+} 
+
+.cards > a:hover {
+  color: #43a047;
+}
+
+.cards > a:active {
+  color: #43a047;
+}
+
 /* @media (min-width: 550px) {
   .cards {
     gap: 2rem;
