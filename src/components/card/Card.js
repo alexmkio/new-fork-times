@@ -1,3 +1,4 @@
+import { ExternalLink } from 'react-external-link';
 import PropTypes from 'prop-types';
 import './Card.css';
 
@@ -16,12 +17,6 @@ export const Card = ({ article }) => {
 
         <dt>Section:</dt>
         <dd>{article.section}</dd>
-
-        <dt>URL:</dt>
-        <dd>{article.short_url}</dd>
-
-        <dt>Picture:</dt>
-        <dd>{article.multimedia[0].url}</dd>
       </dl>
     </article>
   )
