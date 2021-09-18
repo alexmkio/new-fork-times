@@ -1,6 +1,5 @@
 .card {
-  /* position: relative; */
-  width: 30vw;
+  width: 80vw;
   padding: 1vw;
   display: flex;
   flex-direction: column;
@@ -10,7 +9,6 @@
   margin: 1vw;
   cursor: pointer;
   transition: transform 0.2s;
-
 }
 
 .card:hover {
@@ -36,4 +34,16 @@ dd {
   margin-left: -100%;
   margin-right: -100%;
   text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .card {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .card {
+    width: 25vw;
+  }
 }
