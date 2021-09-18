@@ -12,6 +12,7 @@ h2 {
 .cards {
   margin: 1vh auto;
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
 
@@ -35,27 +36,14 @@ h2 {
   color: #43a047;
 }
 
-/* @media (min-width: 550px) {
+@media (min-width: 1000px) {
   .cards {
-    gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media (min-width: 810px) {
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-} */
 
 @media (min-width: 1600px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
