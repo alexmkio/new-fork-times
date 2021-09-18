@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/new-fork-times/static/css/main.fe0f61e4.chunk.css",
-    "main.js": "/new-fork-times/static/js/main.f40f24d5.chunk.js",
-    "main.js.map": "/new-fork-times/static/js/main.f40f24d5.chunk.js.map",
+    "main.css": "/new-fork-times/static/css/main.49f0e8df.chunk.css",
+    "main.js": "/new-fork-times/static/js/main.34658ed3.chunk.js",
+    "main.js.map": "/new-fork-times/static/js/main.34658ed3.chunk.js.map",
     "runtime-main.js": "/new-fork-times/static/js/runtime-main.94ab3e11.js",
     "runtime-main.js.map": "/new-fork-times/static/js/runtime-main.94ab3e11.js.map",
-    "static/js/2.ed68ab24.chunk.js": "/new-fork-times/static/js/2.ed68ab24.chunk.js",
-    "static/js/2.ed68ab24.chunk.js.map": "/new-fork-times/static/js/2.ed68ab24.chunk.js.map",
+    "static/js/2.e86daa38.chunk.js": "/new-fork-times/static/js/2.e86daa38.chunk.js",
+    "static/js/2.e86daa38.chunk.js.map": "/new-fork-times/static/js/2.e86daa38.chunk.js.map",
     "index.html": "/new-fork-times/index.html",
-    "static/css/main.fe0f61e4.chunk.css.map": "/new-fork-times/static/css/main.fe0f61e4.chunk.css.map",
-    "static/js/2.ed68ab24.chunk.js.LICENSE.txt": "/new-fork-times/static/js/2.ed68ab24.chunk.js.LICENSE.txt"
+    "static/css/main.49f0e8df.chunk.css.map": "/new-fork-times/static/css/main.49f0e8df.chunk.css.map",
+    "static/js/2.e86daa38.chunk.js.LICENSE.txt": "/new-fork-times/static/js/2.e86daa38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.94ab3e11.js",
-    "static/js/2.ed68ab24.chunk.js",
-    "static/css/main.fe0f61e4.chunk.css",
-    "static/js/main.f40f24d5.chunk.js"
+    "static/js/2.e86daa38.chunk.js",
+    "static/css/main.49f0e8df.chunk.css",
+    "static/js/main.34658ed3.chunk.js"
   ]
 }
