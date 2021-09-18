@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "section": "arts",
+      "title": "Article #1",
+      "abstract": "I'm baby wolf knausgaard drinking vinegar, master cleanse vaporware roof party pug seitan affogato venmo cliche keytar.",
+      "byline": "By Travis Rollins",
+      "updated_date": "2021-09-18T17:35:13-04:00",
+      "published_date": "2021-09-15T16:53:49-04:00",
+      "multimedia": [
+        {
+        "url": "https://c.tenor.com/QAN9RxLUSxUAAAAM/cat-cute.gif"
+        }
+      ],
+      "short_url": "https://en.wikipedia.org/"
+    },
+    {
+      "section": "history",
+      "title": "Article #2",
+      "abstract": "Occupy pitchfork blue bottle, flexitarian single-origin coffee YOLO lumbersexual prism portland schlitz bicycle rights skateboard snackwave locavore XOXO.",
+      "byline": "By Brian Zanti",
+      "updated_date": "2021-09-17T17:35:13-04:00",
+      "published_date": "2021-09-15T16:53:49-04:00",
+      "multimedia": [
+        {
+        "url": "https://c.tenor.com/mz72EycMOmcAAAAd/dog-funny-dog.gif"
+        }
+      ],
+      "short_url": "https://www.androidpolice.com/"
+    },
+    {
+      "section": "politics",
+      "title": "Article #3",
+      "abstract": "Banh mi selvage meggings tousled enamel pin iPhone. Pinterest fashion axe hammock brunch vaporware, vape banh mi activated charcoal chartreuse flannel yr kogi.",
+      "byline": "By Taylor Want",
+      "updated_date": "2021-09-16T17:35:13-04:00",
+      "published_date": "2021-09-15T16:53:49-04:00",
+      "multimedia": [
+        {
+        "url": "https://i.pinimg.com/originals/ac/f9/a5/acf9a5214d40c8d911bd236b037f8b66.gif"
+        }
+      ],
+      "short_url": "https://www.cyclingnews.com/"
+    }
+  ]
+}
