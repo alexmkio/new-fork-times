@@ -1,4 +1,3 @@
-import { ExternalLink } from 'react-external-link';
 import PropTypes from 'prop-types';
 import './Card.css';
 
