@@ -10,6 +10,7 @@
   margin: 1vw;
   cursor: pointer;
   transition: transform 0.2s;
+
 }
 
 .card:hover {
@@ -32,5 +33,7 @@ dt {
 dd {
   font-size: 1.4rem;
   text-transform: capitalize;
-  margin: 0;
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
 }
