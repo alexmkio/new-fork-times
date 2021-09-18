@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ExternalLink } from 'react-external-link';
 import PropTypes from 'prop-types';
 import './Details.css';
 
@@ -22,10 +23,10 @@ export const Details = ({ article }) => {
         <dd>{article.section}</dd>
 
         <dt>URL:</dt>
-        <dd>{article.short_url}</dd>
+        <dd><ExternalLink href={article.short_url} /></dd>
 
         <dt>Picture:</dt>
-        <dd>{article.multimedia[0].url}</dd>
+        <dd><ExternalLink href={article.multimedia[0].url} /></dd>
 
         <dt>Abstract:</dt>
         <dd>{article.abstract}</dd>
