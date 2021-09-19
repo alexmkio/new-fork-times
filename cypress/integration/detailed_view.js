@@ -40,7 +40,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(7).contains(`I'm baby wolf knausgaard drinking vinegar`)
   })
 
-  // it('The page should have a button that takes the user back to the dashboard', () => {
-  // })
+  it('The page should have a button that takes the user back to the dashboard', () => {
+    cy.get('button').click()
+    cy.url().should('equal', 'http://localhost:3000/#/')
+  })
 
 })
