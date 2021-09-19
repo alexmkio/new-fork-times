@@ -9,11 +9,12 @@ describe('Dashboard View', () => {
   })
 
   it('The page should display a title', () => {
-    cy.get('.details-section').eq(0).children('dl').children('dd').eq(0).contains('Article #1')
+    cy.get('dd').eq(0).contains('Article #1')
   })
 
-  // it('The page should display an author', () => {
-  // })
+  it('The page should display an author', () => {
+    cy.get('dd').eq(1).contains('Travis Rollins')
+  })
 
   // it('The page should display a published date', () => {
   // })
