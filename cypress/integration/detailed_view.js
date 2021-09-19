@@ -17,11 +17,11 @@ describe('Dashboard View', () => {
   })
 
   it('The page should display a published date', () => {
-    cy.get('dd').eq(2).contains('9/15/2021 --- 4:53:49 PM')
+    cy.get('dd').eq(2).contains('9/15/2021')
   })
 
   it('The page should display a last updated date', () => {
-    cy.get('dd').eq(3).contains('9/16/2021 --- 5:35:13 PM')
+    cy.get('dd').eq(3).contains('9/16/2021')
   })
 
   it('The page should display a section', () => {

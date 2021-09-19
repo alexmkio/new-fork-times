@@ -22,6 +22,7 @@ describe('Dashboard View', () => {
   
   it('There should be a sort button that sorts the article cards by their last updated date (in descending order)', () => {
     cy.get('button').click()
+    cy.wait(2000)
     cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #3')
     cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
   })
