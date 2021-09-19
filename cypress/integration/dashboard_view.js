@@ -20,8 +20,11 @@ describe('Dashboard View', () => {
     cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #3')
   })
   
-  // it('There should be a sort button that sorts the article cards by their last updated date (in descending order)', () => {
-  // })
+  it('There should be a sort button that sorts the article cards by their last updated date (in descending order)', () => {
+    cy.get('button').click()
+    cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #3')
+    cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
+  })
   
   // it('Once the articles are sorted the user should no longer see the sort button', () => {
   // })
