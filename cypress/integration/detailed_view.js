@@ -24,8 +24,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(3).contains('9/16/2021 --- 5:35:13 PM')
   })
 
-  // it('The page should display a section', () => {
-  // })
+  it('The page should display a section', () => {
+    cy.get('dd').eq(4).contains('arts')
+  })
 
   // it('The page should display a link to the article', () => {
   // })
