@@ -36,8 +36,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(6).children('a').should('have.attr', 'href').and('includes', 'https://c.tenor.com/QAN9RxLUSxUAAAAM/cat-cute.gif')
   })
 
-  // it('The page should display an abstract', () => {
-  // })
+  it('The page should display an abstract', () => {
+    cy.get('dd').eq(7).contains(`I'm baby wolf knausgaard drinking vinegar`)
+  })
 
   // it('The page should have a button that takes the user back to the dashboard', () => {
   // })
