@@ -20,8 +20,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(2).contains('9/15/2021 --- 4:53:49 PM')
   })
 
-  // it('The page should display a last updated date', () => {
-  // })
+  it('The page should display a last updated date', () => {
+    cy.get('dd').eq(3).contains('9/16/2021 --- 5:35:13 PM')
+  })
 
   // it('The page should display a section', () => {
   // })
