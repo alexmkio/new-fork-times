@@ -1,5 +1,6 @@
 {
   "testFiles": [
-    "dashboard_view.js"
+    "dashboard_view.js",
+    "detailed_view.js"
   ]
 }
