@@ -28,8 +28,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(4).contains('arts')
   })
 
-  // it('The page should display a link to the article', () => {
-  // })
+  it('The page should display a link to the article', () => {
+    cy.get('dd').eq(5).children('a').should('have.attr', 'href').and('includes', 'https://nyti.ms/3CnlvBu')
+  })
 
   // it('The page should display a link to multimedia', () => {
   // })
