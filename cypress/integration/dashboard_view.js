@@ -12,11 +12,13 @@ describe('Dashboard View', () => {
     cy.get('.card').should('have.length', 3)
   })
   
-  // it('The first article card should be by Travis Rollins', () => {
-  // })
+  it('The first article card should be by Travis Rollins', () => {
+    cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #1')
+  })
   
-  // it('The last article card should be by Taylor Want', () => {
-  // })
+  it('The last article card should be by Taylor Want', () => {
+    cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #3')
+  })
   
   // it('There should be a sort button that sorts the article cards by their last updated date (in descending order)', () => {
   // })
