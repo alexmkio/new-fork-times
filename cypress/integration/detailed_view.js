@@ -16,8 +16,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(1).contains('Travis Rollins')
   })
 
-  // it('The page should display a published date', () => {
-  // })
+  it('The page should display a published date', () => {
+    cy.get('dd').eq(2).contains('9/15/2021 --- 4:53:49 PM')
+  })
 
   // it('The page should display a last updated date', () => {
   // })
