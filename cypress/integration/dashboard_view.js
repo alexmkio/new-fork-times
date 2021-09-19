@@ -31,7 +31,9 @@ describe('Dashboard View', () => {
     cy.get('button').should('have.length', 0)
   })
   
-  // it('Clicking on a card should take the user to a detailed page for that article', () => {
-  // })
+  it('Clicking on a card should take the user to a detailed page for that article', () => {
+    cy.get('.card').eq(0).click()
+    cy.url().should('include', '/article/3CnlvBu')
+  })
 
 })
