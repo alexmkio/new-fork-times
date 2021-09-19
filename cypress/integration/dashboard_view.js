@@ -26,8 +26,10 @@ describe('Dashboard View', () => {
     cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
   })
   
-  // it('Once the articles are sorted the user should no longer see the sort button', () => {
-  // })
+  it('Once the articles are sorted the user should no longer see the sort button', () => {
+    cy.get('button').click()
+    cy.get('button').should('have.length', 0)
+  })
   
   // it('Clicking on a card should take the user to a detailed page for that article', () => {
   // })
