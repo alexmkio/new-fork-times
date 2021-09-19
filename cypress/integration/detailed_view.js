@@ -32,8 +32,9 @@ describe('Dashboard View', () => {
     cy.get('dd').eq(5).children('a').should('have.attr', 'href').and('includes', 'https://nyti.ms/3CnlvBu')
   })
 
-  // it('The page should display a link to multimedia', () => {
-  // })
+  it('The page should display a link to multimedia', () => {
+    cy.get('dd').eq(6).children('a').should('have.attr', 'href').and('includes', 'https://c.tenor.com/QAN9RxLUSxUAAAAM/cat-cute.gif')
+  })
 
   // it('The page should display an abstract', () => {
   // })
