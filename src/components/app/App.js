@@ -12,7 +12,12 @@ export const App = () => {
   let history = useHistory()
   const [articles, setArticles] = useState([])
   const [errorCode, setErrorCode] = useState(0)
-  const [sorted, setSorted] = useState(false)
+  const [sorted, setSorted] = useState({
+    published_asc: false,
+    published_desc: false,
+    updated_asc: false,
+    updated_desc: false,
+  })
 
   const fetchAndCleanData = async (section) => {
     try {
@@ -21,7 +26,12 @@ export const App = () => {
         return new Date(b.published_date) - new Date(a.published_date)
       })
       setArticles(sortedArticles)
-      setSorted(true)
+      setSorted({
+        published_asc: false,
+        published_desc: true,
+        updated_asc: false,
+        updated_desc: false,
+      })
     } catch (error) {
       setErrorCode(Number(error.message))
     }
