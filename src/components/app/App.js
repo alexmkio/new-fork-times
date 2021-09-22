@@ -7,6 +7,12 @@ import { List } from '../list/List';
 import { Details } from '../details/Details';
 import { Error } from '../error/Error';
 import { getData } from '../../utils/apiCalls';
+import {
+  sortByPublishedAsc,
+  sortByPublishedDesc,
+  sortByUpdatedAsc,
+  sortByUpdatedDesc
+} from '../../utils/utils';
 
 export const App = () => {
   let history = useHistory()
@@ -22,10 +28,7 @@ export const App = () => {
   const fetchAndCleanData = async (section) => {
     try {
       let fetched = await getData(section)
-      let sortedArticles = fetched.results.sort((a, b) => {
-        return new Date(b.published_date) - new Date(a.published_date)
-      })
-      setArticles(sortedArticles)
+      setArticles(sortByPublishedDesc(fetched.results))
       setSorted({
         published_asc: false,
         published_desc: true,
@@ -42,6 +45,7 @@ export const App = () => {
   }, [])
 
   const sortArticles = (event) => {
+    
   }
 
   const clearSelected = () => {
