@@ -1,4 +1,4 @@
-describe('Dashboard View', () => {
+describe('Detailed View', () => {
 
   beforeEach(() => {
     cy.loadDetails()
@@ -17,7 +17,7 @@ describe('Dashboard View', () => {
   })
 
   it('The page should display a published date', () => {
-    cy.get('dd').eq(2).contains('9/15/2021')
+    cy.get('dd').eq(2).contains('9/12/2021')
   })
 
   it('The page should display a last updated date', () => {
