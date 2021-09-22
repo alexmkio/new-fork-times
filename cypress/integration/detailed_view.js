@@ -1,4 +1,4 @@
-describe('Dashboard View', () => {
+describe('Detailed View', () => {
 
   beforeEach(() => {
     cy.loadDetails()
