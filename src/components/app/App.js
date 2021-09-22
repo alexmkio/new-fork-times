@@ -17,7 +17,11 @@ export const App = () => {
   const fetchAndCleanData = async (section) => {
     try {
       let fetched = await getData(section)
-      setArticles(fetched.results)
+      let sortedArticles = fetched.results.sort((a, b) => {
+        return new Date(b.published_date) - new Date(a.published_date)
+      })
+      setArticles(sortedArticles)
+      setSorted(true)
     } catch (error) {
       setErrorCode(Number(error.message))
     }
@@ -27,13 +31,7 @@ export const App = () => {
     fetchAndCleanData('home')
   }, [])
 
-  const sortArticles = () => {
-    let unsortedArticles = [...articles]
-    let sortedArticles = unsortedArticles.sort((a, b) => {
-      return new Date(b.updated_date) - new Date(a.updated_date)
-    })
-    setArticles(sortedArticles)
-    setSorted(true)
+  const sortArticles = (event) => {
   }
 
   const clearSelected = () => {
