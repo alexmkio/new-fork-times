@@ -11,26 +11,35 @@ describe('Dashboard View', () => {
   it('The page should have three article cards', () => {
     cy.get('.card').should('have.length', 3)
   })
-  
-  it('The first article card should be by Travis Rollins', () => {
+
+  it('The articles should be sorted by published date in descending order by default', () => {
     cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #1')
-  })
-  
-  it('The last article card should be by Taylor Want', () => {
     cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #3')
   })
-  
-  // this test passes locally but not using CI
-  // it('There should be a sort button that sorts the article cards by their last updated date (in descending order)', () => {
-  //   cy.get('button').click()
-  //   cy.wait(2000)
-  //   cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #3')
-  //   cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
-  // })
-  
-  it('Once the articles are sorted the user should no longer see the sort button', () => {
-    cy.get('button').click()
-    cy.get('button').should('have.length', 0)
+
+  it('There is a dropdown with sort options', () => {
+    cy.get('select').select('Published - ascending').should('have.value', 'pubAsc')
+      .get('select').select('Published - descending').should('have.value', 'pubDesc')
+      .get('select').select('Updated - ascending').should('have.value', 'upAsc')
+      .get('select').select('Updated - descending').should('have.value', 'upDesc')
+  })
+
+  it('A user can sort the articles by published date in ascending order', () => {
+    cy.get('select').select('Published - ascending')
+    cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #3')
+    cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
+  })
+
+  it('A user can sort the articles by updated date in ascending order', () => {
+    cy.get('select').select('Updated - ascending')
+    cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #1')
+    cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #2')
+  })
+
+  it('A user can sort the articles by updated date in descending order', () => {
+    cy.get('select').select('Updated - descending')
+    cy.get('.card').eq(0).children('dl').children('dd').eq(0).contains('Article #2')
+    cy.get('.card').eq(2).children('dl').children('dd').eq(0).contains('Article #1')
   })
   
   it('Clicking on a card should take the user to a detailed page for that article', () => {
