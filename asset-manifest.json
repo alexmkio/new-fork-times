@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/new-fork-times/static/css/main.7109f09e.chunk.css",
-    "main.js": "/new-fork-times/static/js/main.c3940ff7.chunk.js",
-    "main.js.map": "/new-fork-times/static/js/main.c3940ff7.chunk.js.map",
+    "main.js": "/new-fork-times/static/js/main.ce369b96.chunk.js",
+    "main.js.map": "/new-fork-times/static/js/main.ce369b96.chunk.js.map",
     "runtime-main.js": "/new-fork-times/static/js/runtime-main.94ab3e11.js",
     "runtime-main.js.map": "/new-fork-times/static/js/runtime-main.94ab3e11.js.map",
     "static/js/2.a3272fcd.chunk.js": "/new-fork-times/static/js/2.a3272fcd.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.94ab3e11.js",
     "static/js/2.a3272fcd.chunk.js",
     "static/css/main.7109f09e.chunk.css",
-    "static/js/main.c3940ff7.chunk.js"
+    "static/js/main.ce369b96.chunk.js"
   ]
 }
