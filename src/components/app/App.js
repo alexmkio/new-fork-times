@@ -18,23 +18,13 @@ export const App = () => {
   let history = useHistory()
   const [articles, setArticles] = useState([])
   const [errorCode, setErrorCode] = useState(0)
-  const [sorted, setSorted] = useState({
-    published_asc: false,
-    published_desc: false,
-    updated_asc: false,
-    updated_desc: false,
-  })
+  const [sorted, setSorted] = useState('')
 
   const fetchAndCleanData = async (section) => {
     try {
       let fetched = await getData(section)
       setArticles(sortByPublishedDesc(fetched.results))
-      setSorted({
-        published_asc: false,
-        published_desc: true,
-        updated_asc: false,
-        updated_desc: false,
-      })
+      setSorted('pubDesc')
     } catch (error) {
       setErrorCode(Number(error.message))
     }
@@ -47,39 +37,19 @@ export const App = () => {
   const sortArticles = (event) => {
     if (event === 'pubAsc') {
       setArticles(sortByPublishedAsc(articles))
-      setSorted({
-        published_asc: true,
-        published_desc: false,
-        updated_asc: false,
-        updated_desc: false,
-      })
+      setSorted('pubAsc')
     }
     if (event === 'pubDesc') {
       setArticles(sortByPublishedDesc(articles))
-      setSorted({
-        published_asc: false,
-        published_desc: true,
-        updated_asc: false,
-        updated_desc: false,
-      })
+      setSorted('pubDesc')
     }
     if (event === 'upAsc') {
       setArticles(sortByUpdatedAsc(articles))
-      setSorted({
-        published_asc: false,
-        published_desc: false,
-        updated_asc: true,
-        updated_desc: false,
-      })
+      setSorted('upAsc')
     }
     if (event === 'upDesc') {
       setArticles(sortByUpdatedDesc(articles))
-      setSorted({
-        published_asc: false,
-        published_desc: false,
-        updated_asc: false,
-        updated_desc: true,
-      })
+      setSorted('upDesc')
     }
   }
 
